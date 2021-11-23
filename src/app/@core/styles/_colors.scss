@@ -106,6 +106,7 @@ $tertiary: #f0b4d2;
 $danger: red;
 $text1: #333333;
 $text-white: #ffffff;
+$background-white: #ffffff;
 
 $colors: (
   --primary: (
@@ -135,5 +136,9 @@ $colors: (
   --text-white: (
     $text-white,
     $text-white,
+  ),
+  --background-white: (
+    $background-white,
+    $background-white,
   ),
 );

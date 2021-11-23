@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { HomeLandingComponent } from './home-landing/home-landing.component';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeWhyWeExistComponent } from './home-why-we-exist/home-why-we-exist.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent, HomeLandingComponent],
+  declarations: [HomeComponent, HomeLandingComponent, HomeWhyWeExistComponent],
   imports: [CommonModule, RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
