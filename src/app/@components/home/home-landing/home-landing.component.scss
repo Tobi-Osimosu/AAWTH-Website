@@ -1,0 +1,79 @@
+#home-landing {
+  background: -o-radial-gradient(
+      50% 57.14%,
+      47.31% 34.4%,
+      rgba(196, 153, 115, 0) 0%,
+      rgba(18, 25, 60, 0.5) 100%
+    ),
+    var(--secondary);
+  background: radial-gradient(
+      47.31% 34.4% at 50% 57.14%,
+      rgba(196, 153, 115, 0) 0%,
+      rgba(18, 25, 60, 0.5) 100%
+    ),
+    var(--secondary);
+  min-height: 80vh;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    gap: 1.875rem;
+  }
+
+  .content {
+    .header,
+    .subheader,
+    .text {
+      color: var(--text-white);
+    }
+
+    .header {
+      font-size: 2.125rem;
+      font-weight: 700;
+      line-height: 2.875rem;
+      margin-bottom: 1.875rem;
+    }
+
+    .subheader {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.75rem;
+      margin-bottom: 0.5625rem;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    .text {
+      font-size: 0.75rem;
+      font-size: 400;
+      line-height: 1.5rem;
+      margin-bottom: 1.5625rem;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #home-landing {
+    .container {
+      max-width: 1310px;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  #home-landing {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  #home-landing {
+  }
+}

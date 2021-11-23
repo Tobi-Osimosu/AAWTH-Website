@@ -4,6 +4,10 @@
 @import "./app/@core/styles/typography";
 @import "./app/@core/styles/button";
 @import "./app/@core/styles/input";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/containers";
 
 * {
   margin: 0;
