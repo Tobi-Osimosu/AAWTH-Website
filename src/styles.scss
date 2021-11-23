@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/@core/styles/colors";
+@import "./app/@core/styles/theme";
+@import "./app/@core/styles/typography";
+@import "./app/@core/styles/button";
+@import "./app/@core/styles/input";
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &::-moz-selection {
+    color: #ffffff;
+    background: var(--primary);
+  }
+
+  &::selection {
+    color: #ffffff;
+    background: var(--primary);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+   //   background: var(--general);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  // border-radius: 5px;
+  background: var(--primary);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--general);
+}
+
+/************Make theme transitions smooth***********/
+body .animate-colors-transition * {
+  -webkit-transition: color 0.3s, background 0.3s,
+    background-color 0.3s ease-in-out;
+  -o-transition: color 0.3s, background 0.3s, background-color 0.3s ease-in-out;
+  -webkit-transition: color 0.3s, background 0.3s,
+    background-color 0.3s ease-in-out;
+  -webkit-transition: color 0.3s, background 0.3s, background-color 0.3s ease-in-out;
+  transition: color 0.3s, background 0.3s, background-color 0.3s ease-in-out;
+}
+/****************************************************/
+
+/************************No highlight or select on click************************/
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+/*******************************************************************************/

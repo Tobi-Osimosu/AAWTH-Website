@@ -1,0 +1,46 @@
+@import "~@angular/material/theming";
+@import "../colors";
+
+@include mat-core();
+
+$Material-primary: mat-palette($mat-primary, 500);
+$Material-accent: mat-palette($mat-accent, 500);
+$Material-warn: mat-palette($mat-warn, 500);
+
+$Material-light-theme: mat-light-theme(
+  (
+    color: (
+      primary: $Material-primary,
+      accent: $Material-accent,
+      warn: $Material-warn,
+    ),
+  )
+);
+
+$Material-dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $Material-primary,
+      accent: $Material-accent,
+      warn: $Material-warn,
+    ),
+  )
+);
+
+/* This will disable the style duplication warning */
+$mat-theme-ignore-duplication-warnings: true;
+/***************************************************/
+
+$Material-typography: mat-typography-config(
+  $font-family: '"Greycliff CF", sans-serif',
+);
+
+.light-mode {
+  @include angular-material-theme($Material-light-theme);
+}
+
+.dark-mode {
+  @include angular-material-theme($Material-dark-theme);
+}
+
+@include angular-material-typography($Material-typography);

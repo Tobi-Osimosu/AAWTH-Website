@@ -1,0 +1,44 @@
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--var(--primary-light3)) inset !important;
+  box-shadow: 0 0 0 30px var(--var(--primary-light3)) inset !important;
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999s;
+  transition-delay: 9999s;
+}
+
+/* Change font-size and font family of input when autocomplete kicks in*/
+input:-webkit-autofill::first-line {
+  //   font-family: "Inter", sans-serif !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: #6b6b6c !important;
+}
+
+input,
+.mat-select-value {
+  -o-text-overflow: ellipsis !important;
+  text-overflow: ellipsis !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: #6b6b6c !important;
+  vertical-align: middle !important;
+}
+
+/******************Make arrow on input type number to disappear******************/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/********************************************************************************/
