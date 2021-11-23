@@ -2,6 +2,31 @@
   background: var(--background-white);
   padding-top: 5.625rem;
   padding-bottom: 5.625rem;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    gap: 1.875rem;
+  }
+
+  .content {
+  }
+
+  .illustration-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    .illustration {
+      max-width: 100%;
+    }
+  }
 }
 
 @media screen and (min-width: 992px) {
