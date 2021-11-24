@@ -1,0 +1,37 @@
+#home-brand-personality {
+  background: var(--background-white);
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+
+  .header {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 2.1875rem;
+    text-align: center;
+    max-width: 41.6875rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #home-brand-personality {
+    .container {
+      max-width: 1310px;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  #home-brand-personality {
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  #home-brand-personality {
+  }
+}
