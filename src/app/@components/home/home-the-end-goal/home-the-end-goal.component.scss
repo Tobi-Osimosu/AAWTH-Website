@@ -1,0 +1,101 @@
+#home-the-end-goal {
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+  background: var(--background-white);
+
+  .background {
+    background: var(--tertiary);
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    gap: 6.25rem;
+  }
+
+  .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+
+    .title {
+      font-size: 1rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--tertiary-dark);
+    }
+
+    .header {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+      font-weight: 600;
+      margin-bottom: 2.1875rem;
+    }
+  }
+
+  .illustration-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    .illustration {
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #home-the-end-goal {
+    .container {
+      max-width: 1310px;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  #home-the-end-goal {
+    .grid-container {
+      grid-template-columns: 1fr;
+      gap: 3.125rem;
+    }
+
+    .content {
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2;
+    }
+
+    .illustration-container {
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  #home-the-end-goal {
+  }
+}

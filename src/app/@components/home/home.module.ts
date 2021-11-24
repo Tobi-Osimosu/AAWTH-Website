@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeWhyWeExistComponent } from './home-why-we-exist/home-why-we-exist.component';
 import { HomeWhatWeDoComponent } from './home-what-we-do/home-what-we-do.component';
 import { HomeTheEndGoalComponent } from './home-the-end-goal/home-the-end-goal.component';
+import { HomeHowWeBehaveComponent } from './home-how-we-behave/home-how-we-behave.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent, HomeLandingComponent, HomeWhyWeExistComponent, HomeWhatWeDoComponent, HomeTheEndGoalComponent],
+  declarations: [HomeComponent, HomeLandingComponent, HomeWhyWeExistComponent, HomeWhatWeDoComponent, HomeTheEndGoalComponent, HomeHowWeBehaveComponent],
   imports: [CommonModule, RouterModule.forChild(routes)],
   exports: [RouterModule],
 })

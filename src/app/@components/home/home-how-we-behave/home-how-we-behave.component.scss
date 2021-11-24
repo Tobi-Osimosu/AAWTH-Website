@@ -1,4 +1,4 @@
-#home-what-we-do {
+#home-how-we-behave {
   background: var(--accent);
   padding-top: 5.625rem;
   padding-bottom: 5.625rem;
@@ -58,7 +58,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  #home-what-we-do {
+  #home-how-we-behave {
     .container {
       max-width: 1310px;
       padding-left: 20px;
@@ -69,7 +69,7 @@
 }
 
 @media screen and (max-width: 991.98px) {
-  #home-what-we-do {
+  #home-how-we-behave {
     .grid-container {
       grid-template-columns: 1fr;
       gap: 3.125rem;
@@ -78,6 +78,6 @@
 }
 
 @media screen and (max-width: 767.98px) {
-  #home-what-we-do {
+  #home-how-we-behave {
   }
 }
