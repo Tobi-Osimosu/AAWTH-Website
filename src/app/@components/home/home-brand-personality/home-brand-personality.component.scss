@@ -14,6 +14,18 @@
     margin-right: auto;
     margin-bottom: 3.5625rem;
   }
+
+  .brand-personality-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0.9375rem;
+
+    .brand-personality-card {
+      padding: 2.5rem 2rem;
+      border-radius: 0.3125rem;
+      background: var(--accent);
+    }
+  }
 }
 
 @media screen and (min-width: 992px) {
