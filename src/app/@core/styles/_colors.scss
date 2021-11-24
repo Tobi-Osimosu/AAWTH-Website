@@ -103,6 +103,7 @@ $primary: #f15b2a;
 $secondary: #18191f;
 $accent: rgba(183, 226, 236, 0.2);
 $tertiary: #f0b4d2;
+$tertiary-light: rgba(240, 180, 210, 0.2);
 $danger: red;
 $text1: #333333;
 $text-white: #ffffff;
@@ -124,6 +125,10 @@ $colors: (
   --tertiary: (
     $tertiary,
     $tertiary,
+  ),
+  --tertiary-light: (
+    $tertiary-light,
+    $tertiary-light,
   ),
   --danger: (
     $danger,
