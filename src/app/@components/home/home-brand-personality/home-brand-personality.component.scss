@@ -24,6 +24,17 @@
       padding: 2.5rem 2rem 4.375rem 2rem;
       border-radius: 0.3125rem;
       background: var(--accent);
+      -webkit-transition: -webkit-transform 0.25s ease;
+      transition: -webkit-transform 0.25s ease;
+      -o-transition: transform 0.25s ease;
+      transition: transform 0.25s ease;
+      transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+
+      &:hover {
+        -webkit-transform: scale(0.98);
+        -ms-transform: scale(0.98);
+        transform: scale(0.98);
+      }
 
       .brand-personality-title {
         font-size: 1.75rem;
