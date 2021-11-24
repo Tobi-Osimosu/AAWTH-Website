@@ -23,8 +23,32 @@
     -ms-flex-pack: center;
     justify-content: center;
 
-    .illustration {
-      max-width: 100%;
+    .rectangle-1 {
+      position: relative;
+      height: 60%;
+      width: 80%;
+      border-radius: 0.75rem;
+      background: var(--tertiary-light);
+
+      .rectangle-2 {
+        position: absolute;
+        top: -50%;
+        right: 2.5rem;
+        border-radius: 0.75rem;
+        background: var(--secondary);
+        height: 115%;
+        width: 55%;
+      }
+
+      .rectangle-3 {
+        position: absolute;
+        bottom: 1.75rem;
+        left: -5.3125rem;
+        border-radius: 0.75rem;
+        background: var(--primary);
+        height: 95%;
+        width: 55%;
+      }
     }
   }
 }
