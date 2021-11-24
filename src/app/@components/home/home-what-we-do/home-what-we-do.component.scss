@@ -79,5 +79,11 @@
 
 @media screen and (max-width: 767.98px) {
   #home-what-we-do {
+    .content {
+      .header {
+        font-size: 1.25rem;
+        line-height: 2rem;
+      }
+    }
   }
 }
