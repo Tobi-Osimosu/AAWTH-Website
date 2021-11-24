@@ -24,6 +24,19 @@
       padding: 2.5rem 2rem;
       border-radius: 0.3125rem;
       background: var(--accent);
+
+      .brand-personality-title {
+        font-size: 1.75rem;
+        line-height: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+
+      .brand-personality-content {
+        font-size: 1.125rem;
+        line-height: 1.875rem;
+        margin-bottom: 1.5rem;
+      }
     }
   }
 }
