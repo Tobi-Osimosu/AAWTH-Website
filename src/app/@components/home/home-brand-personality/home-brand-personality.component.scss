@@ -21,7 +21,7 @@
     gap: 0.9375rem;
 
     .brand-personality-card {
-      padding: 2.5rem 2rem;
+      padding: 2.5rem 2rem 4.375rem 2rem;
       border-radius: 0.3125rem;
       background: var(--accent);
 
@@ -60,8 +60,20 @@
 
         .brand-personality-link-text {
           font-size: 0.75rem;
+          font-weight: 500;
           color: var(--text1);
           margin-bottom: 0rem;
+        }
+      }
+    }
+
+    .highlight {
+      color: var(--text-white);
+      background: var(--secondary);
+
+      .brand-personality-link-container {
+        .brand-personality-link-text {
+          color: var(--text-white);
         }
       }
     }
@@ -81,6 +93,25 @@
 
 @media screen and (max-width: 991.98px) {
   #home-brand-personality {
+    .brand-personality-grid {
+      .brand-personality-card {
+        .brand-personality-title {
+          font-size: 1.5rem;
+          line-height: 1.625rem;
+          text-align: center;
+        }
+
+        .brand-personality-content {
+          font-size: 1rem;
+          line-height: 1.75rem;
+          text-align: center;
+        }
+
+        .brand-personality-link-container {
+          margin: auto;
+        }
+      }
+    }
   }
 }
 
