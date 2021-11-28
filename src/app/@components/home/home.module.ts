@@ -10,6 +10,7 @@ import { HomeHowWeBehaveComponent } from './home-how-we-behave/home-how-we-behav
 import { HomeBrandPersonalityComponent } from './home-brand-personality/home-brand-personality.component';
 import { HomeWhoWeAreComponent } from './home-who-we-are/home-who-we-are.component';
 import { HomeWhoWeServeComponent } from './home-who-we-serve/home-who-we-serve.component';
+import { HomeBlogPostComponent } from './home-blog-post/home-blog-post.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent, HomeLandingComponent, HomeWhyWeExistComponent, HomeWhatWeDoComponent, HomeTheEndGoalComponent, HomeHowWeBehaveComponent, HomeBrandPersonalityComponent, HomeWhoWeAreComponent, HomeWhoWeServeComponent],
+  declarations: [HomeComponent, HomeLandingComponent, HomeWhyWeExistComponent, HomeWhatWeDoComponent, HomeTheEndGoalComponent, HomeHowWeBehaveComponent, HomeBrandPersonalityComponent, HomeWhoWeAreComponent, HomeWhoWeServeComponent, HomeBlogPostComponent],
   imports: [CommonModule, RouterModule.forChild(routes)],
   exports: [RouterModule],
 })

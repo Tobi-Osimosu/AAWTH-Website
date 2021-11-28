@@ -1,0 +1,18 @@
+<div id="home-blog-post">
+  <div class="container">
+    <p class="title">Blog Post</p>
+    <h1 class="header">News, stories and insights</h1>
+    <p class="subheader">
+      Read through our blog from our experiences and insights.
+    </p>
+
+    <div class="blog-grid">
+      <ng-container *ngFor="let blog of blogPosts">
+        <div class="blog-card">
+          <h1 class="blog-header">{{ blog.blog_header }}</h1>
+          <img [src]="blog.blog_image" alt="" class="blog-img" />
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
