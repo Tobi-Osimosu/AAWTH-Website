@@ -50,7 +50,26 @@
           <div class="rectangle-2"></div>
           <div class="rectangle-3"></div>
           <div class="rectangle-4">
-            <h3 class="box-header">Empower women</h3>
+            <h3 class="box-header">
+              <ng-container *ngIf="progressBarHeight < 73.33333333333333"
+                >Empower women</ng-container
+              >
+              <ng-container
+                *ngIf="
+                  progressBarHeight > 73.33333333333333 &&
+                  progressBarHeight < 146.6666666666667
+                "
+                >Promote women</ng-container
+              >
+              <ng-container
+                *ngIf="
+                  progressBarHeight > 146.6666666666667 &&
+                  progressBarHeight < 220
+                "
+              >
+                Develop women to occupy key roles</ng-container
+              >
+            </h3>
             <p class="box-content">
               We have committed to empowering our own African Women to grow, to
               deliver impactful, engaging and transformational work through best
