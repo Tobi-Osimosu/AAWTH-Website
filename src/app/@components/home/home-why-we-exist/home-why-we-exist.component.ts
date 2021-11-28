@@ -44,7 +44,7 @@ export class HomeWhyWeExistComponent implements OnInit, AfterViewInit {
     let progressBarHeight = (this.progressBar.nativeElement as HTMLElement)
       .clientHeight;
 
-    if (progressBarHeight < 250) {
+    if (progressBarHeight < 220) {
       this.renderer.setStyle(
         this.progressBar.nativeElement,
         'height',
