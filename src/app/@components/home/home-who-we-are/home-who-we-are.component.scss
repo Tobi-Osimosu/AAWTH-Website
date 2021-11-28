@@ -1,0 +1,132 @@
+#home-who-we-are {
+  background: var(--background-white);
+  padding-top: 5.625rem;
+  //   padding-bottom: 5.625rem;
+  padding-bottom: 16.875rem;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 4.5fr 7.5fr;
+    gap: 1.875rem;
+  }
+
+  .content {
+    .title {
+      font-size: 1rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .header {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .info {
+      font-size: 1.125rem;
+      line-height: 1.875rem;
+      margin-bottom: 1.5rem;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .illustration-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    .rectangle-1 {
+      position: relative;
+      width: 550px;
+      height: 350px;
+      border-radius: 0.75rem;
+      background: var(--tertiary-light);
+
+      .rectangle-2 {
+        position: absolute;
+        top: -53%;
+        left: 0.5425rem;
+        border-radius: 0.75rem;
+        background: var(--secondary);
+        width: 378px;
+        height: 404px;
+        // background: url(/assets/images/rectangle-3.png);
+        // background-position: center;
+        // background-size: cover;
+      }
+
+      .rectangle-3 {
+        position: absolute;
+        bottom: 1.75rem;
+        left: -5.3125rem;
+        border-radius: 0.75rem;
+        background: var(--primary);
+        width: 214px;
+        height: 191px;
+        // background-position: center;
+        // background-size: cover;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #home-who-we-are {
+    .container {
+      max-width: 1310px;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  #home-who-we-are {
+    .grid-container {
+      grid-template-columns: 1fr;
+      gap: 3.125rem;
+    }
+
+    .content {
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2;
+
+      .info {
+        font-size: 1rem;
+        line-height: 1.75rem;
+      }
+    }
+
+    .illustration-container {
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  #home-who-we-are {
+    .content {
+      .header {
+        font-size: 1.25rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}
