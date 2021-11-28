@@ -9,6 +9,7 @@ import { HomeTheEndGoalComponent } from './home-the-end-goal/home-the-end-goal.c
 import { HomeHowWeBehaveComponent } from './home-how-we-behave/home-how-we-behave.component';
 import { HomeBrandPersonalityComponent } from './home-brand-personality/home-brand-personality.component';
 import { HomeWhoWeAreComponent } from './home-who-we-are/home-who-we-are.component';
+import { HomeWhoWeServeComponent } from './home-who-we-serve/home-who-we-serve.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent, HomeLandingComponent, HomeWhyWeExistComponent, HomeWhatWeDoComponent, HomeTheEndGoalComponent, HomeHowWeBehaveComponent, HomeBrandPersonalityComponent, HomeWhoWeAreComponent],
+  declarations: [HomeComponent, HomeLandingComponent, HomeWhyWeExistComponent, HomeWhatWeDoComponent, HomeTheEndGoalComponent, HomeHowWeBehaveComponent, HomeBrandPersonalityComponent, HomeWhoWeAreComponent, HomeWhoWeServeComponent],
   imports: [CommonModule, RouterModule.forChild(routes)],
   exports: [RouterModule],
 })

@@ -102,6 +102,7 @@
 $primary: #f15b2a;
 $secondary: #18191f;
 $accent: rgba(183, 226, 236, 0.2);
+$accent-dark: rgba(183, 226, 236, 0.2);
 $tertiary: #f0b4d2;
 $tertiary-light: rgba(240, 180, 210, 0.2);
 $tertiary-dark: #a01e64;
@@ -122,6 +123,10 @@ $colors: (
   --accent: (
     $accent,
     $accent,
+  ),
+  --accent-dark: (
+    $accent-dark,
+    $accent-dark,
   ),
   --tertiary: (
     $tertiary,
