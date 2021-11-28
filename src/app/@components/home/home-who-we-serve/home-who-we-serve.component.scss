@@ -29,15 +29,36 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
 
     .illustration {
       max-width: 100%;
+      margin-bottom: 2.1875rem;
+    }
+
+    .progress-bar-container {
+      position: relative;
+      width: 0.09375rem;
+      height: 200px;
+      background: #f0f1f7;
+
+      .progress-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--primary);
+        width: 0.09375rem;
+        height: 0px;
+        -webkit-transition: height 0.25s linear;
+        -o-transition: height 0.25s linear;
+        transition: height 0.25s linear;
+      }
     }
   }
 

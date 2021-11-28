@@ -1,15 +1,63 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-home-who-we-serve',
   templateUrl: './home-who-we-serve.component.html',
-  styleUrls: ['./home-who-we-serve.component.scss']
+  styleUrls: ['./home-who-we-serve.component.scss'],
 })
-export class HomeWhoWeServeComponent implements OnInit {
+export class HomeWhoWeServeComponent implements OnInit, AfterViewInit {
+  progressBarInterval: any;
 
-  constructor() { }
+  @ViewChild('progressBar', { static: false }) progressBar!: ElementRef;
 
-  ngOnInit(): void {
+  constructor(private renderer: Renderer2) {}
+
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    this.setProgressBarInterval();
+    // Check
+    // increment
   }
 
+  get progressBarHeight() {
+    return (this.progressBar.nativeElement as HTMLElement).clientHeight;
+  }
+
+  setProgressBarInterval() {
+    this.progressBarInterval = setInterval(
+      this.incrementProgressBar.bind(this),
+      300
+    );
+  }
+
+  incrementProgressBar() {
+    let progressBarHeight = (this.progressBar.nativeElement as HTMLElement)
+      .clientHeight;
+
+    if (progressBarHeight !== 100) {
+      this.renderer.setStyle(
+        this.progressBar.nativeElement,
+        'height',
+        `${progressBarHeight + 10}px`
+      );
+    } else {
+      this.clearProgressBarInterval();
+    }
+  }
+
+  clearProgressBarInterval() {
+    clearInterval(this.progressBarInterval);
+
+    this.renderer.setStyle(this.progressBar.nativeElement, 'height', `0px`);
+
+    this.setProgressBarInterval();
+  }
 }
