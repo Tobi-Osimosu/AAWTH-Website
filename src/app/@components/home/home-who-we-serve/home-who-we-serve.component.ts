@@ -26,13 +26,17 @@ export class HomeWhoWeServeComponent implements OnInit, AfterViewInit {
   }
 
   get progressBarHeight() {
-    return (this.progressBar.nativeElement as HTMLElement).clientHeight;
+    if (this.progressBar !== undefined) {
+      return (this.progressBar!.nativeElement as HTMLElement)!.clientHeight;
+    } else {
+      return 0;
+    }
   }
 
   setProgressBarInterval() {
     this.progressBarInterval = setInterval(
       this.incrementProgressBar.bind(this),
-      300
+      500
     );
   }
 

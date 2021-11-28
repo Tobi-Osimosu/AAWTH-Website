@@ -42,22 +42,52 @@
       margin-bottom: 2.1875rem;
     }
 
-    .progress-bar-container {
-      position: relative;
-      width: 0.09375rem;
-      height: 200px;
-      background: #f0f1f7;
+    .stepper-container {
+      display: grid;
+      grid-template-columns: 0.09375rem 1fr;
+      gap: 1.25rem;
 
-      .progress-bar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: var(--primary);
+      .progress-bar-container {
+        position: relative;
         width: 0.09375rem;
-        height: 0px;
-        -webkit-transition: height 0.25s linear;
-        -o-transition: height 0.25s linear;
-        transition: height 0.25s linear;
+        height: 200px;
+        background: #f0f1f7;
+
+        .progress-bar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: var(--primary);
+          width: 0.09375rem;
+          height: 0px;
+          -webkit-transition: height 0.25s linear;
+          -o-transition: height 0.25s linear;
+          transition: height 0.25s linear;
+        }
+      }
+
+      .steps {
+        .step {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+          height: 83.33333333333333px;
+          font-size: 1rem;
+          -webkit-transition: font-weight 0.25s linear;
+          -o-transition: font-weight 0.25s linear;
+          transition: font-weight 0.25s linear;
+
+          &.active {
+            font-size: 1.125rem;
+            font-weight: 700;
+          }
+        }
       }
     }
   }

@@ -10,9 +10,38 @@
           class="illustration"
         />
 
-        <div class="">
+        <div class="stepper-container">
           <div class="progress-bar-container">
             <div #progressBar class="progress-bar"></div>
+          </div>
+
+          <div class="steps">
+            <div
+              class="step"
+              [ngClass]="{ active: progressBarHeight < 83.33333333333333 }"
+            >
+              Empower women
+            </div>
+            <div
+              class="step"
+              [ngClass]="{
+                active:
+                  progressBarHeight > 83.33333333333333 &&
+                  progressBarHeight < 166.6666666666667
+              }"
+            >
+              Promote women
+            </div>
+            <div
+              class="step"
+              [ngClass]="{
+                active:
+                  progressBarHeight > 166.6666666666667 &&
+                  progressBarHeight < 250
+              }"
+            >
+              Develop women to occupy key roles
+            </div>
           </div>
         </div>
       </div>
