@@ -120,7 +120,7 @@
 @media screen and (max-width: 991.98px) {
   #home-who-we-are {
     padding-bottom: 9.375rem;
-    
+
     .grid-container {
       grid-template-columns: 1fr;
       gap: 3.125rem;
@@ -153,6 +153,25 @@
       .header {
         font-size: 1.25rem;
         line-height: 2rem;
+      }
+    }
+
+    .illustration-container {
+      margin-top: unset;
+      margin-bottom: unset;
+
+      .rectangle-1 {
+        width: 100%;
+        height: 100%;
+
+        .rectangle-2,
+        .rectangle-3,
+        .rectangle-4,
+        .rectangle-5 {
+          position: relative;
+          inset: unset;
+          width: 100%;
+        }
       }
     }
   }
