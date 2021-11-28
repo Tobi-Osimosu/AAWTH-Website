@@ -1,7 +1,6 @@
 #home-who-we-are {
   background: var(--background-white);
   padding-top: 5.625rem;
-  //   padding-bottom: 5.625rem;
   padding-bottom: 16.875rem;
 
   .grid-container {
@@ -57,7 +56,7 @@
 
       .rectangle-2 {
         position: absolute;
-        top: -53%;
+        top: -11.4375rem;
         left: 0.5425rem;
         border-radius: 0.75rem;
         background: var(--secondary);
@@ -70,12 +69,36 @@
 
       .rectangle-3 {
         position: absolute;
-        bottom: 1.75rem;
-        left: -5.3125rem;
+        top: 1.875rem;
+        right: -3.9775rem;
         border-radius: 0.75rem;
         background: var(--primary);
         width: 214px;
         height: 191px;
+        // background-position: center;
+        // background-size: cover;
+      }
+
+      .rectangle-4 {
+        position: absolute;
+        bottom: -4.75rem;
+        left: -3.435rem;
+        border-radius: 0.75rem;
+        background: var(--tertiary);
+        width: 214px;
+        height: 191px;
+        // background-position: center;
+        // background-size: cover;
+      }
+
+      .rectangle-5 {
+        position: absolute;
+        bottom: -11.5625rem;
+        right: 0rem;
+        border-radius: 0.75rem;
+        background: var(--tertiary-dark);
+        width: 377px;
+        height: 300px;
         // background-position: center;
         // background-size: cover;
       }
@@ -96,6 +119,8 @@
 
 @media screen and (max-width: 991.98px) {
   #home-who-we-are {
+    padding-bottom: 9.375rem;
+    
     .grid-container {
       grid-template-columns: 1fr;
       gap: 3.125rem;
@@ -113,6 +138,8 @@
     }
 
     .illustration-container {
+      margin-top: 5rem;
+      margin-bottom: 9.375rem;
       -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
       order: 1;
