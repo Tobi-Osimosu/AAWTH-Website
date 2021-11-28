@@ -23,8 +23,6 @@ export class HomeWhoWeServeComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.setProgressBarInterval();
-    // Check
-    // increment
   }
 
   get progressBarHeight() {
@@ -42,7 +40,7 @@ export class HomeWhoWeServeComponent implements OnInit, AfterViewInit {
     let progressBarHeight = (this.progressBar.nativeElement as HTMLElement)
       .clientHeight;
 
-    if (progressBarHeight !== 100) {
+    if (progressBarHeight !== 250) {
       this.renderer.setStyle(
         this.progressBar.nativeElement,
         'height',
