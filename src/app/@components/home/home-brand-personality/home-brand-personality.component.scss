@@ -132,5 +132,20 @@
       font-size: 1.25rem;
       line-height: 2rem;
     }
+
+    .brand-personality-grid {
+      .brand-personality-card {
+        .brand-personality-title {
+          font-size: 1.25rem;
+          line-height: 2rem;
+          margin-bottom: 1rem;
+        }
+
+        .brand-personality-content {
+          font-size: 0.875rem;
+          line-height: 1.625rem;
+        }
+      }
+    }
   }
 }

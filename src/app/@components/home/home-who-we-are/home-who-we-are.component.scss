@@ -62,9 +62,9 @@
         background: var(--secondary);
         width: 378px;
         height: 404px;
-        // background: url(/assets/images/rectangle-3.png);
-        // background-position: center;
-        // background-size: cover;
+        background: url(/assets/images/who-we-are1.png);
+        background-position: center;
+        background-size: cover;
       }
 
       .rectangle-3 {
@@ -75,8 +75,9 @@
         background: var(--primary);
         width: 214px;
         height: 191px;
-        // background-position: center;
-        // background-size: cover;
+        background: url(/assets/images/who-we-are2.png);
+        background-position: center;
+        background-size: cover;
       }
 
       .rectangle-4 {
@@ -87,8 +88,9 @@
         background: var(--tertiary);
         width: 214px;
         height: 191px;
-        // background-position: center;
-        // background-size: cover;
+        background: url(/assets/images/who-we-are3.png);
+        background-position: center;
+        background-size: cover;
       }
 
       .rectangle-5 {
@@ -99,8 +101,9 @@
         background: var(--tertiary-dark);
         width: 377px;
         height: 300px;
-        // background-position: center;
-        // background-size: cover;
+        background: url(/assets/images/who-we-are4.png);
+        background-position: center;
+        background-size: cover;
       }
     }
   }
@@ -154,6 +157,11 @@
         font-size: 1.25rem;
         line-height: 2rem;
       }
+
+      .info {
+        font-size: 0.875rem;
+        line-height: 1.625rem;
+      }
     }
 
     .illustration-container {
@@ -161,6 +169,14 @@
       margin-bottom: unset;
 
       .rectangle-1 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 20px;
         width: 100%;
         height: 100%;
 
