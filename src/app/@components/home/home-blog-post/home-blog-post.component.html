@@ -11,6 +11,17 @@
         <div class="blog-card">
           <h1 class="blog-header">{{ blog.blog_header }}</h1>
           <img [src]="blog.blog_image" alt="" class="blog-img" />
+
+          <div class="bottom-row">
+            <div class="left-side">
+              <p class="author">{{ blog.author }}</p>
+              <p class="time">{{ blog.time }}</p>
+            </div>
+
+            <div class="right-side">
+              <a [href]="blog.link" class="btn link">Read</a>
+            </div>
+          </div>
         </div>
       </ng-container>
     </div>

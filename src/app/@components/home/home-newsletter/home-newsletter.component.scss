@@ -1,0 +1,119 @@
+#home-newsletter {
+  position: relative;
+  background: var(--background-white);
+  padding-top: 5.625rem;
+  padding-bottom: 5.625rem;
+  overflow: hidden;
+
+  .container {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    background: var(--secondary);
+  }
+
+  .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 28.75rem;
+  }
+
+  .header {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    color: var(--text-white);
+    margin-bottom: 1.125rem;
+    text-align: center;
+  }
+
+  .subheader {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    text-align: center;
+    color: var(--text-white);
+    margin-bottom: 2.1875rem;
+  }
+
+  .email-input {
+    border: 1px solid var(--background-white);
+    border-radius: 0.3125rem;
+    background: transparent;
+    color: var(--text-white);
+    padding: 1.21875rem 1.5rem;
+    color: var(--text-white) !important;
+    font-size: 0.875rem;
+    width: 100%;
+    margin-bottom: 1.4375rem;
+
+    &::-webkit-input-placeholder {
+      color: var(--text-white);
+    }
+
+    &::-moz-placeholder {
+      color: var(--text-white);
+    }
+
+    &:-ms-input-placeholder {
+      color: var(--text-white);
+    }
+
+    &::-ms-input-placeholder {
+      color: var(--text-white);
+    }
+
+    &::placeholder {
+      color: var(--text-white);
+    }
+  }
+
+  .join-us-btn {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    padding: 0.625rem 4rem;
+    border: none;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #home-newsletter {
+    .container {
+      max-width: 1310px;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  #home-newsletter {
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  #home-newsletter {
+    .header {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+    }
+    
+    .subheader {
+      font-size: 0.875rem;
+      line-height: 1.625rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

@@ -12,24 +12,28 @@ export class HomeBlogPostComponent implements OnInit {
       blog_image: '/assets/images/blog.png',
       author: 'ADAOBI O',
       time: '2 days ago',
+      link: 'https://www.google.com',
     },
     {
       blog_header: 'Women leveling up in Tech world',
       blog_image: '/assets/images/blog.png',
       author: 'ADAOBI O',
       time: '2 weeks ago',
+      link: 'https://www.google.com',
     },
     {
       blog_header: 'How has covid’19 accelerated the world of hospitality',
       blog_image: '/assets/images/blog.png',
       author: 'ADAOBI O',
       time: '2 months ago',
+      link: 'https://www.google.com',
     },
     {
       blog_header: 'How can organization improve staff productivity',
       blog_image: '/assets/images/blog.png',
       author: 'ADAOBI O',
       time: '3 months ago',
+      link: 'https://www.google.com',
     },
   ];
   constructor() {}
