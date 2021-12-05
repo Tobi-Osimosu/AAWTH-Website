@@ -21,7 +21,19 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent, HomeLandingComponent, HomeWhyWeExistComponent, HomeWhatWeDoComponent, HomeTheEndGoalComponent, HomeHowWeBehaveComponent, HomeBrandPersonalityComponent, HomeWhoWeAreComponent, HomeWhoWeServeComponent, HomeBlogPostComponent, HomeNewsletterComponent],
+  declarations: [
+    HomeComponent,
+    HomeLandingComponent,
+    HomeWhyWeExistComponent,
+    HomeWhatWeDoComponent,
+    HomeTheEndGoalComponent,
+    HomeHowWeBehaveComponent,
+    HomeBrandPersonalityComponent,
+    HomeWhoWeAreComponent,
+    HomeWhoWeServeComponent,
+    HomeBlogPostComponent,
+    HomeNewsletterComponent,
+  ],
   imports: [CommonModule, RouterModule.forChild(routes)],
   exports: [RouterModule],
 })

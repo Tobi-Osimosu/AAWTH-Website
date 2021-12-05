@@ -14,6 +14,14 @@ const routes: Routes = [
       import('src/app/@components/home/home.module').then((m) => m.HomeModule),
   },
 
+  {
+    path: 'who-we-are',
+    loadChildren: () =>
+      import('src/app/@components/who-we-are/who-we-are.module').then(
+        (m) => m.WhoWeAreModule
+      ),
+  },
+
   // { path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
 ];
 
