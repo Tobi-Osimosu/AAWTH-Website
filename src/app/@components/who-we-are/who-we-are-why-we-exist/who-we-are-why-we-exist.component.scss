@@ -35,6 +35,32 @@
     grid-template-columns: 1.625rem 1fr;
     gap: 1.875rem;
     margin-bottom: 1.0625rem;
+
+    .number-container {
+      .number {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--primary);
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .keypoint-content {
+      .keypoint-header {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.75rem;
+        margin-bottom: 0.6875rem;
+      }
+
+      .keypoint-text {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        font-weight: 400;
+        max-width: 23.75rem;
+      }
+    }
   }
 
   .cta-container {
@@ -67,6 +93,19 @@
       grid-template-columns: 1fr;
       gap: 3.125rem;
     }
+
+    .content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
   }
 }
 
@@ -75,6 +114,15 @@
     .header {
       font-size: 1.25rem;
       line-height: 2rem;
+    }
+
+    .keypoint-container {
+      .keypoint-content {
+        .keypoint-text {
+          font-size: 0.875rem;
+          line-height: 1.625rem;
+        }
+      }
     }
   }
 }
