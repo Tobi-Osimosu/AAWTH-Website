@@ -1,0 +1,58 @@
+#who-we-are-we-believe {
+  position: relative;
+  background: var(--tertiary-light);
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+  overflow: hidden;
+
+  .box-design {
+    position: absolute;
+    top: 2.5rem;
+    right: -3%;
+    width: 15rem;
+    height: 15rem;
+    background: var(--tertiary-light2);
+    border-radius: 1rem;
+    z-index: -1;
+    -webkit-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+  }
+
+  .text {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    max-width: 718px;
+    margin: auto;
+    margin-bottom: 1.25rem;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #who-we-are-we-believe {
+    .container {
+      max-width: 1310px;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  #who-we-are-we-believe {
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  #who-we-are-we-believe {
+    .text {
+      font-size: 0.875rem;
+      line-height: 1.625rem;
+    }
+  }
+}

@@ -35,4 +35,7 @@
   color: var(--text-white);
   background: var(--primary);
   border: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
