@@ -1,0 +1,60 @@
+header {
+  background: var(--background-white);
+
+  &.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  nav {
+    .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
+    }
+
+    .links-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      gap: 2rem;
+
+      a {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--secondary);
+        text-decoration: none;
+
+        &.active-link {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #who-we-are-why-we-exist {
+    header {
+      nav {
+        .container {
+          max-width: 1310px;
+          padding-left: 20px;
+          padding-right: 20px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
