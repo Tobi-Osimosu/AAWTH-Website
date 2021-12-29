@@ -63,6 +63,39 @@
     }
   }
 
+  .illustration-container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    .rectangle1 {
+      position: relative;
+      border-radius: 0.75rem;
+      width: 22.875rem;
+      height: 14.75rem;
+      background: var(--tertiary-light);
+    }
+
+    .rectangle2 {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 408px;
+      height: 588px;
+      border-radius: 0.75rem;
+      background: black;
+      background: url(/assets/images/why-we-exist.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
   .cta-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -105,6 +138,10 @@
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
+    }
+
+    .illustration-container {
+      display: none;
     }
   }
 }
