@@ -7,6 +7,32 @@ header {
     left: 0;
     width: 100%;
     z-index: 1;
+    -webkit-animation-name: header-slide-down;
+    animation-name: header-slide-down;
+    -webkit-animation-duration: 0.25s;
+    animation-duration: 0.25s;
+  }
+
+  @-webkit-keyframes header-slide-down {
+    0% {
+      -webkit-transform: translateY(-80px);
+      transform: translateY(-80px);
+    }
+    100% {
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes header-slide-down {
+    0% {
+      -webkit-transform: translateY(-80px);
+      transform: translateY(-80px);
+    }
+    100% {
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px);
+    }
   }
 
   nav {
