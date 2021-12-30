@@ -28,28 +28,50 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         let scrollTop =
           window.pageYOffset || document.documentElement.scrollTop;
 
-        if (scrollTop >= 80) {
-          this.renderer.addClass(this.header.nativeElement, 'fixed-header');
-        } else {
-          if (this.header.nativeElement.classList.contains('fixed-header')) {
-            this.renderer.removeClass(
-              this.header.nativeElement,
-              'fixed-header'
-            );
-          }
-        }
+        // if (scrollTop >= 80) {
+        //   this.renderer.addClass(this.header.nativeElement, 'fixed-header');
+        // } else {
+        //   if (this.header.nativeElement.classList.contains('fixed-header')) {
+        //     this.renderer.removeClass(
+        //       this.header.nativeElement,
+        //       'fixed-header'
+        //     );
+        //   }
+        // }
 
         if (scrollTop > this.lastScrollTop) {
           // downscroll code
-          // console.log('DownScroll');
+          if (this.header.nativeElement.classList.contains('fixed-header')) {
+            this.removeHeaderSlideAnimation();
+          }
         } else {
           // upscroll code
-          // console.log('UpScroll');
+          if (scrollTop >= 100) {
+            this.renderer.addClass(this.header.nativeElement, 'fixed-header');
+          } else {
+            this.removeHeaderSlideAnimation();
+          }
         }
 
         this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
       },
       false
     );
+  }
+
+  removeHeaderSlideAnimation() {
+    let timeout: any;
+
+    timeout = setTimeout(() => {
+      this.renderer.removeClass(this.header.nativeElement, 'fixed-header');
+      this.renderer.removeClass(
+        this.header.nativeElement,
+        'fixed-header-slide-up'
+      );
+
+      clearTimeout(timeout);
+    }, 255);
+
+    this.renderer.addClass(this.header.nativeElement, 'fixed-header-slide-up');
   }
 }
