@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   scrollEventRef: any;
 
   @ViewChild('header', { static: false }) header!: ElementRef;
+  @ViewChild('headerToggler', { static: false }) headerToggler!: ElementRef;
 
   constructor(private renderer: Renderer2) {}
 
@@ -46,6 +47,8 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       window.addEventListener('scroll', this.scrollEventRef, true);
     } else {
       window.removeEventListener('scroll', this.scrollEventRef, true);
+
+      this.removeHeaderSlideAnimation();
     }
   }
 
@@ -85,5 +88,17 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     }, 255);
 
     this.renderer.addClass(this.header.nativeElement, 'fixed-header-slide-up');
+  }
+
+  toggleHeader() {
+    if (
+      (this.headerToggler.nativeElement as HTMLElement).classList.contains(
+        'open'
+      )
+    ) {
+      this.renderer.removeClass(this.headerToggler.nativeElement, 'open');
+    } else {
+      this.renderer.addClass(this.headerToggler.nativeElement, 'open');
+    }
   }
 }

@@ -1,5 +1,5 @@
 <header #header>
-<!-- <header #header (window:resize)="manageHeaderSlideAnimation()"> -->
+  <!-- <header #header (window:resize)="manageHeaderSlideAnimation()"> -->
   <nav>
     <div class="container">
       <div class="brand">
@@ -8,38 +8,47 @@
         </a>
       </div>
 
-      <div class="links-container">
-        <a routerLink="/who-we-are" routerLinkActive="active-link"
-          >Who we are</a
-        >
-        <a
-          routerLink="/what-we-do"
-          routerLinkActive="active-link"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >What we do</a
-        >
-        <a
-          routerLink="/news-and-stories"
-          routerLinkActive="active-link"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >News and Stories</a
-        >
-        <a
-          routerLink="/insight-and-resources"
-          routerLinkActive="active-link"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >Insight & Resources</a
-        >
-        <a
-          routerLink="/newsletter"
-          routerLinkActive="active-link"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >Newsletter</a
-        >
+      <div #headerToggler class="header-toggler" (click)="toggleHeader()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-      <div class="cta-container">
-        <a routerLink="/" class="btn primary-btn">Become a member</a>
+      <div class="links-container">
+        <div class="links">
+          <a routerLink="/who-we-are" routerLinkActive="active-link"
+            >Who we are</a
+          >
+          <a
+            routerLink="/what-we-do"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >What we do</a
+          >
+          <a
+            routerLink="/news-and-stories"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >News and Stories</a
+          >
+          <a
+            routerLink="/insight-and-resources"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Insight & Resources</a
+          >
+          <a
+            routerLink="/newsletter"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Newsletter</a
+          >
+        </div>
+
+        <div class="cta-container">
+          <a routerLink="/" class="btn primary-btn">Become a member</a>
+        </div>
       </div>
     </div>
   </nav>
