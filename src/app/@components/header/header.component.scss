@@ -1,6 +1,6 @@
 header {
   background: var(--background-white);
-
+  
   &.fixed-header {
     position: fixed;
     top: 0;
@@ -12,14 +12,14 @@ header {
     -webkit-animation-duration: 0.25s;
     animation-duration: 0.25s;
   }
-
+  
   &.fixed-header-slide-up {
     -webkit-animation-name: header-slide-up;
     animation-name: header-slide-up;
     -webkit-animation-duration: 0.25s;
     animation-duration: 0.25s;
   }
-
+  
   @-webkit-keyframes header-slide-down {
     0% {
       -webkit-transform: translateY(-80px);
@@ -32,7 +32,7 @@ header {
       transform: translateY(0px);
     }
   }
-
+  
   @-webkit-keyframes header-slide-down {
     0% {
       -webkit-transform: translateY(-80px);
@@ -43,7 +43,7 @@ header {
       transform: translateY(0px);
     }
   }
-
+  
   @keyframes header-slide-down {
     0% {
       -webkit-transform: translateY(-80px);
@@ -54,7 +54,7 @@ header {
       transform: translateY(0px);
     }
   }
-
+  
   @-webkit-keyframes header-slide-up {
     0% {
       -webkit-transform: translateY(0px);
@@ -65,7 +65,7 @@ header {
       transform: translateY(-80px);
     }
   }
-
+  
   @keyframes header-slide-up {
     0% {
       -webkit-transform: translateY(0px);
@@ -113,15 +113,14 @@ header {
 }
 
 @media screen and (min-width: 992px) {
-  #who-we-are-why-we-exist {
-    header {
-      nav {
-        .container {
-          max-width: 1310px;
-          padding-left: 20px;
-          padding-right: 20px;
-          width: 100%;
-        }
+  header {
+
+    nav {
+      .container {
+        max-width: 1310px;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
       }
     }
   }

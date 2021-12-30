@@ -14,6 +14,7 @@ import {
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
   lastScrollTop: number = 0;
+  scrollEventRef: any;
 
   @ViewChild('header', { static: false }) header!: ElementRef;
 
@@ -22,41 +23,52 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    window.addEventListener(
-      'scroll',
-      () => {
-        let scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
+    this.manageHeaderSlideAnimation();
 
-        // if (scrollTop >= 80) {
-        //   this.renderer.addClass(this.header.nativeElement, 'fixed-header');
-        // } else {
-        //   if (this.header.nativeElement.classList.contains('fixed-header')) {
-        //     this.renderer.removeClass(
-        //       this.header.nativeElement,
-        //       'fixed-header'
-        //     );
-        //   }
-        // }
+    let resizeTimeout: any;
 
-        if (scrollTop > this.lastScrollTop) {
-          // downscroll code
-          if (this.header.nativeElement.classList.contains('fixed-header')) {
-            this.removeHeaderSlideAnimation();
-          }
-        } else {
-          // upscroll code
-          if (scrollTop >= 100) {
-            this.renderer.addClass(this.header.nativeElement, 'fixed-header');
-          } else {
-            this.removeHeaderSlideAnimation();
-          }
-        }
+    window.onresize = () => {
+      clearTimeout(resizeTimeout);
 
-        this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-      },
-      false
-    );
+      resizeTimeout = setTimeout(
+        this.manageHeaderSlideAnimation.bind(this),
+        100
+      );
+    };
+  }
+
+  manageHeaderSlideAnimation() {
+    console.log('manageHeaderSlideAnimation()');
+
+    if (window.matchMedia('(min-width: 992px)').matches) {
+      this.scrollEventRef = this.scrollEvent.bind(this);
+
+      window.addEventListener('scroll', this.scrollEventRef, true);
+    } else {
+      window.removeEventListener('scroll', this.scrollEventRef, true);
+    }
+  }
+
+  scrollEvent() {
+    console.log('scrollEvent()');
+
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > this.lastScrollTop) {
+      // downscroll code
+      if (this.header.nativeElement.classList.contains('fixed-header')) {
+        this.removeHeaderSlideAnimation();
+      }
+    } else {
+      // upscroll code
+      if (scrollTop >= 100) {
+        this.renderer.addClass(this.header.nativeElement, 'fixed-header');
+      } else {
+        this.removeHeaderSlideAnimation();
+      }
+    }
+
+    this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
   }
 
   removeHeaderSlideAnimation() {
