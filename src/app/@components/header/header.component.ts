@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   @ViewChild('header', { static: false }) header!: ElementRef;
   @ViewChild('headerToggler', { static: false }) headerToggler!: ElementRef;
+  @ViewChild('linksContainer', { static: false }) linksContainer!: ElementRef;
 
   constructor(private renderer: Renderer2) {}
 
@@ -32,15 +33,14 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       clearTimeout(resizeTimeout);
 
       resizeTimeout = setTimeout(
-        this.manageHeaderSlideAnimation.bind(this),
+        (this.manageHeaderSlideAnimation.bind(this),
+        this.closeMobileHeader.bind(this)),
         100
       );
     };
   }
 
   manageHeaderSlideAnimation() {
-    console.log('manageHeaderSlideAnimation()');
-
     if (window.matchMedia('(min-width: 992px)').matches) {
       this.scrollEventRef = this.scrollEvent.bind(this);
 
@@ -49,6 +49,20 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       window.removeEventListener('scroll', this.scrollEventRef, true);
 
       this.removeHeaderSlideAnimation();
+    }
+  }
+
+  closeMobileHeader() {
+    if (
+      (this.headerToggler.nativeElement as HTMLElement).classList.contains(
+        'open'
+      )
+    ) {
+      this.renderer.removeClass(this.headerToggler.nativeElement, 'open');
+      this.renderer.removeClass(
+        this.linksContainer.nativeElement,
+        'links-container-dropdown'
+      );
     }
   }
 
@@ -97,8 +111,16 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       )
     ) {
       this.renderer.removeClass(this.headerToggler.nativeElement, 'open');
+      this.renderer.removeClass(
+        this.linksContainer.nativeElement,
+        'links-container-dropdown'
+      );
     } else {
       this.renderer.addClass(this.headerToggler.nativeElement, 'open');
+      this.renderer.addClass(
+        this.linksContainer.nativeElement,
+        'links-container-dropdown'
+      );
     }
   }
 }

@@ -3,7 +3,7 @@
   <nav>
     <div class="container">
       <div class="brand">
-        <a routerLink="/">
+        <a routerLink="/" (click)="closeMobileHeader()">
           <img src="/assets/images/logo.png" alt="" class="img-fluid" />
         </a>
       </div>
@@ -15,7 +15,11 @@
         <span></span>
       </div>
 
-      <div class="links-container">
+      <div
+        #linksContainer
+        class="links-container"
+        (click)="closeMobileHeader()"
+      >
         <div class="links">
           <a routerLink="/who-we-are" routerLinkActive="active-link"
             >Who we are</a
